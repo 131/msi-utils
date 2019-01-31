@@ -3,7 +3,7 @@
   "license": "MIT",
   "scripts": {
     "preversion": "npm run checkall",
-    "eslint": "eslint index.js",
+    "eslint": "eslint index.js test/",
     "checkall": "npm run eslint",
     "mocha": "node node_modules/mocha/bin/_mocha",
     "test": "npm run eslint && npm run cover",
