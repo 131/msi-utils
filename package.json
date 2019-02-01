@@ -19,7 +19,7 @@
   "dependencies": {},
   "name": "msi-utils",
   "description": "[![Build Status](https://travis-ci.org/131/msi-utils.svg?branch=master)](https://travis-ci.org/131/msi-utils)\r [![Coverage Status](https://coveralls.io/repos/github/131/msi-utils/badge.svg?branch=master)](https://coveralls.io/github/131/msi-utils?branch=master)\r [![Version](https://img.shields.io/npm/v/msi-utils.svg)](https://www.npmjs.com/package/msi-utils)\r [![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)\r [![Code style](https://img.shields.io/badge/code%2fstyle-ivs-green.svg)](https://www.npmjs.com/package/eslint-plugin-ivs)",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "index.js",
   "directories": {
     "test": "test"
