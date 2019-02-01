@@ -29,6 +29,7 @@ class msi {
   }
 
   static ParseVersion(input) {
+    input = parseInt(input, 16).toString(16); //strip 0x
     let version = `0000000${input}`.substr(-8);
     let major = parseInt(version.substr(0, 2), 16);
     let minor = parseInt(version.substr(2, 2), 16);

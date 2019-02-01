@@ -15,7 +15,7 @@ describe("Minimal test suite", function() {
 
   it("check ParseVersion", function() {
     expect(ParseVersion("80f0000")).to.eql("8.15.0");
-    expect(ParseVersion("1a0000")).to.eql("0.26.0");
+    expect(ParseVersion("0x1a0000")).to.eql("0.26.0");
     expect(ParseVersion("2073b2e")).to.eql("2.7.15150");
     expect(ParseVersion("a0142ee")).to.eql("10.1.17134");
     expect(ParseVersion("e0063bb")).to.eql("14.0.25531");
