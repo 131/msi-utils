@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/131/msi-utils.svg?branch=master)](https://travis-ci.org/131/msi-utils)
+[![Build Status](https://github.com/131/msi-utils/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/131/msi-utils/actions/workflows/test.yml)
 [![Coverage Status](https://coveralls.io/repos/github/131/msi-utils/badge.svg?branch=master)](https://coveralls.io/github/131/msi-utils?branch=master)
 [![Version](https://img.shields.io/npm/v/msi-utils.svg)](https://www.npmjs.com/package/msi-utils)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
@@ -16,6 +16,8 @@ var myMSIGUID = '{12345678-ABCD-WXYZ-1234-ABCDEFGHIJKL}';
 
 var packed = MSI.GUID2Packed(myMSIGUID);
 ```
+
+## CompareVersions
 
 
 

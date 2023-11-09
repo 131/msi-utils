@@ -1,19 +1,19 @@
 "use strict";
 
-const Guid2Packed = require('../').Guid2Packed;
-const ParseVersion = require('../').ParseVersion;
-
 const expect = require('expect.js');
+
+const {Guid2Packed, ParseVersion, CompareVersions}  = require('../');
+
 
 describe("Minimal test suite", function() {
 
-  it("check Guid2Packed", function() {
+  it("should check Guid2Packed", function() {
     var src = "{12345678-ABCD-WXYZ-1234-ABCDEFGHIJKL}";
     expect(Guid2Packed(src)).to.eql("87654321DCBAZYXW2143BADCFEHGJILK");
   });
 
 
-  it("check ParseVersion", function() {
+  it("should check ParseVersion", function() {
     expect(ParseVersion("80f0000")).to.eql("8.15.0");
     expect(ParseVersion("0x1a0000")).to.eql("0.26.0");
     expect(ParseVersion("2073b2e")).to.eql("2.7.15150");
@@ -23,6 +23,15 @@ describe("Minimal test suite", function() {
     expect(ParseVersion("9050000")).to.eql("9.5.0");
     expect(ParseVersion("4")).to.eql("0.0.4");
 
+  });
+
+  it("should check CompareVersions", function() {
+    expect(CompareVersions("1.2.3", "4.5.6")).to.eql(-1);
+
+    expect(CompareVersions("1", "1.2.3")).to.eql(-1);
+    expect(CompareVersions("3-0", " 1.2.3")).to.eql(1);
+
+    expect(CompareVersions("1.2.3", "1.2.3")).to.eql(0);
   });
 
 

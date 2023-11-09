@@ -38,6 +38,17 @@ class msi {
   }
 
 
+  static CompareVersions(v1, v2) {
+    let f = (v) => [...(v.split(/[.-]/)), 0, 0, 0, 0].slice(0, 4).map((a) => parseInt(a));
+    let m1 = f(v1); let m2 = f(v2);
+
+    for(let i = 0; i < 4; i++) {
+      if(m1[i] !== m2[i])
+        return m1[i] < m2[i] ? -1 : 1;
+    }
+
+    return 0;
+  }
 
 }
 
